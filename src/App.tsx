@@ -4,11 +4,8 @@ import { message } from 'antd';
 import { Nav } from './components/nav';
 import { navElements } from './actions';
 import { EAction } from './models';
-import { startRun } from './services';
-import { getPromiseWithAbort } from './utils';
 
 function App() {
-  const ref$ = useRef<() => void>();
 
   const handleCutAction = () => {
     message.success('剪切成功');
@@ -23,9 +20,6 @@ function App() {
   }
 
   const handleRunAction = async () => {
-    const { promise, abort } = getPromiseWithAbort(startRun())
-    ref$.current = abort;
-    await promise;
     message.success('运行成功');
   }
 
@@ -34,7 +28,6 @@ function App() {
   }
 
   const handleStopAction = () => {
-    ref$.current?.();
     message.success('终止成功');
   }
 
