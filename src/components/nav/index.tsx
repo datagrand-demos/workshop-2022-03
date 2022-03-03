@@ -1,14 +1,14 @@
 import S from './index.module.scss';
-import { INavElement, INavAction, EAction } from '../../models';
+import { INavAction, EAction } from '../../models';
 
 interface IProps {
-  elements: INavElement[];
+  actions: INavAction[];
   actionClick: (key: EAction) => void;
 }
 
 export function Nav(props: IProps) {
   const {
-    elements,
+    actions,
     actionClick
   } = props;
 
@@ -33,15 +33,8 @@ export function Nav(props: IProps) {
   return (
     <div className={S.nav}>
       {
-        elements.map((element, index) => {
-          if (element.type === 'action') {
-            return _renderAction(element);
-          }
-          if (element.type === 'divider') {
-            return (
-              <div key={index} className={S.divider} />
-            )
-          }
+        actions.map(action => {
+          return _renderAction(action);
         })
       }
     </div>

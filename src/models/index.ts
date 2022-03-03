@@ -12,10 +12,3 @@ export interface INavAction {
   icon: string;
   action: EAction
 }
-
-export type INavElement =
-  {
-    type: 'action'
-  } & INavAction | {
-    type: 'divider'
-  }
