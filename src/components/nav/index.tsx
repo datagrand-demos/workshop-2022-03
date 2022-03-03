@@ -18,6 +18,7 @@ export function Nav(props: IProps) {
 
   const onClick = (key?: EAction) => {
     if (!key) return;
+    if (disableActions.includes(key)) return;
     actionClick(key);
   }
 
