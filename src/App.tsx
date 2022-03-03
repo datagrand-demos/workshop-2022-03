@@ -66,19 +66,12 @@ function App() {
     }
   }
 
-  const genDisableActions = () => {
-    if (running) {
-      return [EAction.SaveAction, EAction.PasteAction]
-    }
-  }
-
   return (
     <div className="App">
       <Nav
         elements={navElements}
         actionClick={onActionClick}
         hideActions={genHideActions()}
-        disableActions={genDisableActions()}
       />
     </div>
   )

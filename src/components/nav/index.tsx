@@ -5,15 +5,13 @@ interface IProps {
   elements: INavElement[];
   actionClick: (key: EAction) => void;
   hideActions?: EAction[];
-  disableActions?: EAction[];
 }
 
 export function Nav(props: IProps) {
   const {
     elements,
     actionClick,
-    hideActions = [],
-    disableActions = []
+    hideActions = []
   } = props;
 
   const onClick = (key?: EAction) => {
@@ -25,12 +23,9 @@ export function Nav(props: IProps) {
     if (hideActions.includes(item.action)) {
       return null;
     }
-
-    const disabled = disableActions.includes(item.action);
-
     return (
       <div
-        className={`${S.wrap} ${disabled && S['disable-action']}`}
+        className={S.wrap}
         key={item.name}
         onClick={() => onClick(item.action)}
       >
