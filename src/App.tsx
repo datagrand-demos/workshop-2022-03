@@ -8,7 +8,6 @@ import { startRun } from './services';
 import { getPromiseWithAbort } from './utils';
 
 function App() {
-  const [running, setRunning] = useState(false);
   const ref$ = useRef<() => void>();
 
   const handleCutAction = () => {
@@ -24,11 +23,9 @@ function App() {
   }
 
   const handleRunAction = async () => {
-    setRunning(true);
     const { promise, abort } = getPromiseWithAbort(startRun())
     ref$.current = abort;
     await promise;
-    setRunning(false);
     message.success('运行成功');
   }
 
@@ -37,7 +34,6 @@ function App() {
   }
 
   const handleStopAction = () => {
-    setRunning(false);
     ref$.current?.();
     message.success('终止成功');
   }
@@ -58,20 +54,11 @@ function App() {
     actionMap[action]();
   }
 
-  const genHideActions = () => {
-    if (running) {
-      return [EAction.RunAction]
-    } else {
-      return [EAction.StopAction]
-    }
-  }
-
   return (
     <div className="App">
       <Nav
         elements={navElements}
         actionClick={onActionClick}
-        hideActions={genHideActions()}
       />
     </div>
   )

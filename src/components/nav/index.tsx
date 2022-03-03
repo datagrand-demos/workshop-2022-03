@@ -4,14 +4,12 @@ import { INavElement, INavAction, EAction } from '../../models';
 interface IProps {
   elements: INavElement[];
   actionClick: (key: EAction) => void;
-  hideActions?: EAction[];
 }
 
 export function Nav(props: IProps) {
   const {
     elements,
-    actionClick,
-    hideActions = []
+    actionClick
   } = props;
 
   const onClick = (key?: EAction) => {
@@ -20,9 +18,6 @@ export function Nav(props: IProps) {
   }
 
   const _renderAction = (item: INavAction) => {
-    if (hideActions.includes(item.action)) {
-      return null;
-    }
     return (
       <div
         className={S.wrap}
