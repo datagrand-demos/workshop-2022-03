@@ -24,19 +24,16 @@ export const navElements: INavElement[] = [
     action: EAction.CopyAction
   },
   {
-    type: 'group',
-    children: [
-      {
-        name: '粘贴',
-        icon: pasteIcon,
-        action: EAction.PasteAction
-      },
-      {
-        name: '剪切',
-        icon: cutIcon,
-        action: EAction.CutAction
-      },
-    ]
+    type: 'action',
+    name: '粘贴',
+    icon: pasteIcon,
+    action: EAction.PasteAction
+  },
+  {
+    type: 'action',
+    name: '剪切',
+    icon: cutIcon,
+    action: EAction.CutAction
   },
   {
     type: 'divider',

@@ -40,18 +40,6 @@ export function Nav(props: IProps) {
     )
   }
 
-  const _renderGroup = (actions: INavAction[]) => {
-    return (
-      actions.map((action) => {
-        return (
-          <div key={action.name} className={S['action-group-child']}>
-            {_renderAction(action)}
-          </div>
-        )
-      })
-    )
-  }
-
   return (
     <div className={S.nav}>
       {
@@ -62,15 +50,6 @@ export function Nav(props: IProps) {
           if (element.type === 'divider') {
             return (
               <div key={index} className={S.divider} />
-            )
-          }
-          if (element.type === 'group') {
-            return (
-              <div key={index} className={S['action-group']} >
-                {
-                  _renderGroup(element.children)
-                }
-              </div >
             )
           }
         })

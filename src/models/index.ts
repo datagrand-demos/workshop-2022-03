@@ -18,7 +18,4 @@ export type INavElement =
     type: 'action'
   } & INavAction | {
     type: 'divider'
-  } | {
-    type: 'group',
-    children: INavAction[]
   }
