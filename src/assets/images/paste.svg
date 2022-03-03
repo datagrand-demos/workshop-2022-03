@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="icon-粘贴" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" fill="#FFFFFF" fill-opacity="0">
+            <g id="无底">
+                <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+        <g id="编组-8备份-4" transform="translate(2.641015, 1.584758)">
+            <rect id="矩形" stroke="#000000" x="0.5" y="0.5" width="15" height="18" rx="1"></rect>
+            <rect id="矩形备份-19" fill="#CBCBCB" x="2.59203963" y="3.5" width="10.8159207" height="1" rx="0.5"></rect>
+            <rect id="矩形备份-20" fill="#CBCBCB" x="2.59203963" y="8.5" width="3.63869281" height="1" rx="0.5"></rect>
+            <rect id="矩形备份-21" fill="#CBCBCB" x="2.59203963" y="13.5" width="2.5990663" height="1" rx="0.5"></rect>
+            <g id="编组-6备份" transform="translate(6.230732, 4.500000)">
+                <path d="M1,1.2216633 L5.93644708,1.2216633 L5.93644708,1.2216633 L12,6.63523289 L12,8.48027545 L12,15.2216633 C12,15.7739481 11.5522847,16.2216633 11,16.2216633 L1,16.2216633 C0.44771525,16.2216633 6.76353751e-17,15.7739481 0,15.2216633 L0,2.2216633 C-6.76353751e-17,1.66937855 0.44771525,1.2216633 1,1.2216633 Z" id="矩形备份-8" stroke="#007AFF" fill="#EBF4FF"></path>
+                <path d="M12.4695871,7.19072095 L6.77349929,7.19072095 C6.22121454,7.19072095 5.77349929,6.7430057 5.77349929,6.19072095 L5.77349929,0.821845784 L5.77349929,0.821845784 L12.4695871,7.19072095 Z" id="路径" fill="#007AFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
