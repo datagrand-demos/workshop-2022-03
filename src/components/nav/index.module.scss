@@ -2,5 +2,73 @@
   padding: 5px;
   border: 1px solid gray;
   border-radius: 5px;
+  align-items: center;
   display: flex;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  height: 100%;
+  padding: 3px 5px 0 5px;
+
+  &:hover {
+    background: rgba(16, 26, 51, 0.1);
+    border-radius: 2px;
+  }
+
+  &>span {
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &>img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+
+.divider {
+  display: inline-block;
+  align-self: center;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.09);
+  height: 26px;
+  margin: 5px;
+}
+
+.disable-action {
+  opacity: 0.5;
+  background: inherit !important;
+}
+
+.action-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5px;
+
+  .action-group-child {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    cursor: pointer;
+    user-select: none;
+
+    .wrap {
+      display: flex;
+      align-items: center;
+      padding: 3px;
+      flex-direction: initial;
+    }
+
+    .wrap + .wrap {
+      padding-bottom: 3px;
+    }
+  }
 }
